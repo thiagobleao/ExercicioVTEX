@@ -1,0 +1,12 @@
+c:\users\thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCompras\bin\Debug\CarrinhoCompras.exe.config
+c:\users\thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCompras\bin\Debug\CarrinhoCompras.exe
+c:\users\thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCompras\bin\Debug\CarrinhoCompras.pdb
+c:\users\thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCompras\bin\Debug\Newtonsoft.Json.dll
+c:\users\thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCompras\bin\Debug\Newtonsoft.Json.xml
+c:\users\thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCompras\obj\Debug\CarrinhoCompras.csprojResolveAssemblyReference.cache
+c:\users\thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCompras\obj\Debug\CarrinhoCompras.exe
+c:\users\thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCompras\obj\Debug\CarrinhoCompras.pdb
+c:\users\thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCompras\obj\Debug\CarrinhoCompras.Properties.Resources.resources
+c:\users\thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCompras\obj\Debug\CarrinhoCompras.csproj.GenerateResource.Cache
+c:\users\thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCompras\bin\Debug\Resources\discounts.json
+c:\users\thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCompras\bin\Debug\Resources\products.json
