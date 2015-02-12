@@ -10,7 +10,7 @@ namespace CarrinhoCompras
     class Program
     {
 
-        private static Loja loja = new Loja();
+        private static readonly Loja loja = new Loja();
 
         private 
         static void Main(string[] args)
@@ -44,17 +44,24 @@ namespace CarrinhoCompras
 
         private static void insereDesconto()
         {
-            string add = "s";
+            string add;
             if (loja.ProdutosCarrinho.Count > 0)
             {
-                Console.WriteLine("-> Deseja adicionar um cupom de desconto [s/n]?");
-                add = Console.ReadLine();
+                do
+                {
+                    Console.WriteLine("-> Deseja adicionar um cupom de desconto [s/n]?");
+                    add = Console.ReadLine();
+                } while (add.ToUpper() != "S" && add.ToUpper() != "N");
+
+                double totalPedido = loja.ProdutosCarrinho.Sum(x => x.price);
+
                 while (add.ToUpper() == "S")
                 {
                     Console.WriteLine("-> Digite o código do cupom:");
-                    if (!loja.buscarDesconto(Console.ReadLine()))
+                    Discount desconto = loja.buscarDesconto(Console.ReadLine());
+                    if (desconto == null)
                     {
-                        Console.WriteLine("Erro ao calcular o desconto!");
+                        Console.WriteLine("Cupom não encontrado!");
                         do
                         {
                             Console.WriteLine("Deseja tentar novamente [s/n]?");
@@ -62,10 +69,14 @@ namespace CarrinhoCompras
                         } while (add.ToUpper() != "S" && add.ToUpper() != "N");
                     }
                     else
+                    {
+                        double valorDesconto = loja.calcularDesconto(desconto,totalPedido);
+                        Console.WriteLine(loja.retornaPedido(valorDesconto,totalPedido));
                         break;
+                    }
                 }
                 if (add.ToUpper() == "N")
-                    loja.retornaPedido(0, loja.ProdutosCarrinho.Sum(x => x.price));
+                   Console.WriteLine( loja.retornaPedido(0,totalPedido));
             }
         }
     }

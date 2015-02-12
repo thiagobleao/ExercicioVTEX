@@ -14,25 +14,36 @@ namespace CarrinhoCompras
     public class Loja
     {
 
-        public Product[] Produtos;
+        private readonly Product[] Products;
 
-        public Discount[] Descontos;
+        private readonly Discount[] Discounts;
 
         public List<Product> ProdutosCarrinho;
 
         public Loja()
         {
             ProdutosCarrinho = new List<Product>();
-            var sr = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("CarrinhoCompras.Resources.products.json"));
-            Produtos = JsonConvert.DeserializeObject<List<Product>>(sr.ReadToEnd()).ToArray();
 
-            sr = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("CarrinhoCompras.Resources.discounts.json"));
-            Descontos = JsonConvert.DeserializeObject<List<Discount>>(sr.ReadToEnd()).ToArray();
+            Products = lerArquivoProdutos();
+
+            Discounts = lerArquivoDescontos();
+        }
+
+        public Product[] lerArquivoProdutos()
+        {
+            var sr = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("CarrinhoCompras.Resources.products.json"));
+            return JsonConvert.DeserializeObject<List<Product>>(sr.ReadToEnd()).ToArray();
+        }
+
+        public Discount[] lerArquivoDescontos()
+        {
+            var sr = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("CarrinhoCompras.Resources.discounts.json"));
+            return JsonConvert.DeserializeObject<List<Discount>>(sr.ReadToEnd()).ToArray();
         }
 
         public string adicionarProduto(int id)
         {
-            Product produto = Produtos.FirstOrDefault(x => x.id == id);
+            Product produto = Products.FirstOrDefault(x => x.id == id);
             if (produto != null)
             {
                 ProdutosCarrinho.Add(produto);
@@ -43,44 +54,39 @@ namespace CarrinhoCompras
             return "Deseja tentar novamente [s/n]?";
         }
 
-        public bool buscarDesconto(string cupom)
+        public Discount buscarDesconto(string cupom)
         {
-            Discount desconto = Descontos.FirstOrDefault(x => x.code == cupom.ToUpper());
+            Discount desconto = Discounts.FirstOrDefault(x => x.code == cupom.ToUpper());
             if (desconto != null)
             {
-                return calcularDesconto(desconto);
+                return desconto;
             }
-            return false;
+            return null;
         }
 
-        public bool calcularDesconto(Discount desconto)
+        public double calcularDesconto(Discount desconto, double totalPedido)
         {
-            try
-            {
-                var totalPedido = ProdutosCarrinho.Sum(x => x.price);
-                double valorDesconto;
-                if (desconto.type == "percentage")
-                    valorDesconto = desconto.amount*0.01*totalPedido;
-                else
-                    valorDesconto = desconto.amount;
-                Console.WriteLine("O desconto foi aplicado!");
-                retornaPedido(valorDesconto,totalPedido);
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
+            double valorDesconto = 0;
+            if (desconto.type == "percentage")
+                valorDesconto = desconto.amount*0.01*totalPedido;
+            else if (desconto.type == "fixed")
+                valorDesconto = desconto.amount;
+            Console.WriteLine("O desconto foi aplicado!");
+            //retornaPedido(valorDesconto,totalPedido);
+            return valorDesconto;
         }
 
-        public void retornaPedido(double valorDesconto, double totalPedido)
+        public string retornaPedido(double valorDesconto, double totalPedido)
         {
+            if (ProdutosCarrinho.Count == 0)
+                return "Erro ao finalizar o pedido, o carrinho está vazio.";
+
             foreach (var produto in ProdutosCarrinho)
             {
-                Console.WriteLine(produto.id + " " + produto.name + " " + produto.price);
+                Console.WriteLine("{0,0}{1,20}{2,30}",produto.id,produto.name,produto.price);
             }
             Console.WriteLine("Descontos: " + valorDesconto);
-            Console.WriteLine("Total: " + (totalPedido - valorDesconto));
+            return "Total: " + (totalPedido - valorDesconto);
         }
     }
 }
