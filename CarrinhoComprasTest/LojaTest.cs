@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Security.Cryptography;
 using CarrinhoCompras;
+using CarrinhoCompras.Models;
 using NUnit.Framework;
 
 namespace CarrinhoComprasTest
@@ -49,7 +50,7 @@ namespace CarrinhoComprasTest
             string mensagem = Loja.adicionarProduto(1);
 
             Assert.IsNull(Loja.ProdutosCarrinho.FirstOrDefault());
-            Assert.AreEqual("Deseja tentar novamente [s/n]?", mensagem);
+            Assert.AreEqual("-> Deseja tentar novamente [s/n]?", mensagem);
         }
 
         [Test]

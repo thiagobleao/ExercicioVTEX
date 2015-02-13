@@ -11,5 +11,3 @@ C:\Users\Thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCo
 C:\Users\Thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoComprasTest\obj\Debug\CarrinhoComprasTest.csprojResolveAssemblyReference.cache
 C:\Users\Thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoComprasTest\obj\Debug\CarrinhoComprasTest.dll
 C:\Users\Thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoComprasTest\obj\Debug\CarrinhoComprasTest.pdb
-C:\Users\Thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoComprasTest\bin\Debug\CarrinhoComprasTest.dll.CodeAnalysisLog.xml
-C:\Users\Thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoComprasTest\bin\Debug\CarrinhoComprasTest.dll.lastcodeanalysissucceeded

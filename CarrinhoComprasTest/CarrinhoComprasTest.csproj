@@ -53,7 +53,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="FakeInputs.cs" />
+    <Compile Include="InputTest.cs" />
     <Compile Include="LojaTest.cs" />
+    <Compile Include="ProgramTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

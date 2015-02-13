@@ -60,9 +60,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Discount.cs" />
+    <Compile Include="Models\Discount.cs" />
+    <Compile Include="UserInput\Input.cs" />
+    <Compile Include="UserInput\IUserInput.cs" />
     <Compile Include="Loja.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

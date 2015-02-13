@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using CarrinhoCompras.Models;
 using CarrinhoCompras.Properties;
 using Newtonsoft.Json;
 
@@ -51,7 +52,7 @@ namespace CarrinhoCompras
                 return "-> Deseja adicionar outro produto [s/n]?";
             }
             Console.WriteLine("Produto não encontrado!");
-            return "Deseja tentar novamente [s/n]?";
+            return "-> Deseja tentar novamente [s/n]?";
         }
 
         public Discount buscarDesconto(string cupom)
@@ -83,7 +84,7 @@ namespace CarrinhoCompras
 
             foreach (var produto in ProdutosCarrinho)
             {
-                Console.WriteLine("{0,0}{1,20}{2,30}",produto.id,produto.name,produto.price);
+                Console.WriteLine(produto.id + " " + produto.name + " " + produto.price);
             }
             Console.WriteLine("Descontos: " + valorDesconto);
             return "Total: " + (totalPedido - valorDesconto);
