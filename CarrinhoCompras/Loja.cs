@@ -72,22 +72,25 @@ namespace CarrinhoCompras
                 valorDesconto = desconto.amount*0.01*totalPedido;
             else if (desconto.type == "fixed")
                 valorDesconto = desconto.amount;
-            Console.WriteLine(Environment.NewLine + "O desconto foi aplicado!");
-            //retornaPedido(valorDesconto,totalPedido);
+            Console.WriteLine(Environment.NewLine + "O desconto foi aplicado!" + Environment.NewLine);
             return valorDesconto;
         }
 
-        public string retornaPedido(double valorDesconto, double totalPedido)
+        public bool retornaPedido(double valorDesconto, double totalPedido)
         {
             if (ProdutosCarrinho.Count == 0)
-                return "Erro ao finalizar o pedido, o carrinho está vazio.";
+            {
+                Console.WriteLine("Erro ao finalizar o pedido, o carrinho está vazio.");
+                return false;
+            }
 
             foreach (var produto in ProdutosCarrinho)
             {
-                Console.WriteLine(Environment.NewLine + "{0,-10}{1,-10}{2,20}", produto.id, produto.name, produto.price);
+                Console.WriteLine("{0,-10}{1,-10}{2,20}", produto.id, produto.name, produto.price);
             }
             Console.WriteLine(Environment.NewLine + "Descontos: " + valorDesconto);
-            return "TOTAL: " + (totalPedido - valorDesconto);
+            Console.WriteLine("TOTAL: " + (totalPedido - valorDesconto));
+            return true;
         }
     }
 }

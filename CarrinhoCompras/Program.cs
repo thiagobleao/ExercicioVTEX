@@ -36,7 +36,7 @@ namespace CarrinhoCompras
 
             if (loja.ProdutosCarrinho.Count > 0)
             {
-                message = "-> Deseja adicionar um cupom de desconto [s/n]?";
+                message = "-> Deseja adicionar um cupom de desconto [s/n]?" + Environment.NewLine;
                 do
                 {
                     adicionarNovamente(input);
@@ -55,12 +55,12 @@ namespace CarrinhoCompras
                     else
                     {
                         double valorDesconto = loja.calcularDesconto(desconto, totalPedido);
-                        Console.WriteLine(loja.retornaPedido(valorDesconto, totalPedido));
+                        loja.retornaPedido(valorDesconto, totalPedido);
                         break;
                     }
                 }
                 if (add.ToUpper() == "N")
-                    Console.WriteLine(loja.retornaPedido(0, totalPedido));
+                    loja.retornaPedido(0, totalPedido);
             }
 
             Console.WriteLine(Environment.NewLine + "Pressione qualquer tecla para sair.");

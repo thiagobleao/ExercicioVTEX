@@ -37,7 +37,7 @@ namespace CarrinhoComprasTest
                         "{0}O produto Boneca Mônica Patinadora foi adicionado!{0}{0}" + 
                         "-> Deseja adicionar outro produto [s/n]?{0}" + 
                         "-> Deseja adicionar um cupom de desconto [s/n]?{0}" + 
-                        "-> Digite o código do cupom:{0}" + 
+                        "{0}-> Digite o código do cupom:{0}" + 
                         "Cupom não encontrado!{0}" + 
                         "-> Deseja tentar novamente [s/n]?{0}" + 
                         "-> Digite o código do cupom:{0}" + 

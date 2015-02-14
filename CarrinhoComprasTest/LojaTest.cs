@@ -106,17 +106,17 @@ namespace CarrinhoComprasTest
             double valorDesconto = 15;
             double totalPedido = Loja.ProdutosCarrinho.Sum(x => x.price);
 
-            string pedido = Loja.retornaPedido(15, totalPedido);
+            bool pedido = Loja.retornaPedido(15, totalPedido);
 
-            Assert.AreEqual("TOTAL: " + (totalPedido - valorDesconto), pedido);
+            Assert.True(pedido);
         }
 
         [Test]
         public void retornaPedido_should_not_return_order_if_ProdutosCarrinho_empty()
         {
-            string pedido = Loja.retornaPedido(15, 0);
+            bool pedido = Loja.retornaPedido(15, 0);
 
-            Assert.AreEqual("Erro ao finalizar o pedido, o carrinho está vazio.", pedido);
+            Assert.False(pedido);
         }
     }
 }
