@@ -11,3 +11,16 @@ C:\Users\Thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoCo
 C:\Users\Thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoComprasTest\obj\Debug\CarrinhoComprasTest.csprojResolveAssemblyReference.cache
 C:\Users\Thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoComprasTest\obj\Debug\CarrinhoComprasTest.dll
 C:\Users\Thiago\documents\visual studio 2013\Projects\CarrinhoCompras\CarrinhoComprasTest\obj\Debug\CarrinhoComprasTest.pdb
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\bin\Debug\Resources\discounts.json
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\bin\Debug\Resources\products.json
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\bin\Debug\CarrinhoComprasTest.dll
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\bin\Debug\CarrinhoComprasTest.pdb
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\bin\Debug\CarrinhoCompras.exe
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\bin\Debug\nunit.framework.dll
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\bin\Debug\CarrinhoCompras.pdb
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\bin\Debug\nunit.framework.xml
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\obj\Debug\CarrinhoComprasTest.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\obj\Debug\CarrinhoComprasTest.dll
+C:\Users\Thiago\Documents\Projects\ExercicioVTEX\CarrinhoComprasTest\obj\Debug\CarrinhoComprasTest.pdb

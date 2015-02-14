@@ -32,7 +32,20 @@ namespace CarrinhoComprasTest
                     Program.Main(new string[] { });
 
                     string expected = string.Format(
-                        "-- Bem-vindo ao Carrinho de Compras!{0}-> Digite o ID do produto que deseja adicionar:{0}O produto Boneca Mônica Patinadora foi adicionado!{0}-> Deseja adicionar outro produto [s/n]?{0}-> Deseja adicionar um cupom de desconto [s/n]?{0}-> Digite o código do cupom:{0}Cupom não encontrado!{0}-> Deseja tentar novamente [s/n]?{0}-> Digite o código do cupom:{0}O desconto foi aplicado!{0}45 Boneca Mônica Patinadora 149,9{0}Descontos: 29,98{0}Total: 119,92{0}Pressione qualquer tecla para sair.{0}",
+                        "-- Bem-vindo ao Carrinho de Compras!{0}" +
+                        "-> Digite o ID do produto que deseja adicionar:{0}" + 
+                        "O produto Boneca Mônica Patinadora foi adicionado!{0}" + 
+                        "-> Deseja adicionar outro produto [s/n]?{0}" + 
+                        "-> Deseja adicionar um cupom de desconto [s/n]?{0}" + 
+                        "-> Digite o código do cupom:{0}" + 
+                        "Cupom não encontrado!{0}" + 
+                        "-> Deseja tentar novamente [s/n]?{0}" + 
+                        "-> Digite o código do cupom:{0}" + 
+                        "O desconto foi aplicado!{0}" + 
+                        "45 Boneca Mônica Patinadora 149,9{0}" + 
+                        "Descontos: 29,98{0}" + 
+                        "Total: 119,92{0}" + 
+                        "Pressione qualquer tecla para sair.{0}",
                         Environment.NewLine);
 
                     string output = sw.ToString();
@@ -57,7 +70,15 @@ namespace CarrinhoComprasTest
                     Program.Main(new string[] { });
 
                     string expected = string.Format(
-                        "-- Bem-vindo ao Carrinho de Compras!{0}-> Digite o ID do produto que deseja adicionar:{0}O produto Boneca Mônica Patinadora foi adicionado!{0}-> Deseja adicionar outro produto [s/n]?{0}-> Deseja adicionar um cupom de desconto [s/n]?{0}45 Boneca Mônica Patinadora 149,9{0}Descontos: 0{0}Total: 149,9{0}Pressione qualquer tecla para sair.{0}",
+                        "-- Bem-vindo ao Carrinho de Compras!{0}" + 
+                        "-> Digite o ID do produto que deseja adicionar:{0}" + 
+                        "O produto Boneca Mônica Patinadora foi adicionado!{0}" + 
+                        "-> Deseja adicionar outro produto [s/n]?{0}" + 
+                        "-> Deseja adicionar um cupom de desconto [s/n]?{0}" + 
+                        "45 Boneca Mônica Patinadora 149,9{0}" + 
+                        "Descontos: 0{0}" + 
+                        "Total: 149,9{0}" + 
+                        "Pressione qualquer tecla para sair.{0}",
                         Environment.NewLine);
 
                     string output = sw.ToString();
