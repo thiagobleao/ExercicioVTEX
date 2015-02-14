@@ -108,7 +108,7 @@ namespace CarrinhoComprasTest
 
             string pedido = Loja.retornaPedido(15, totalPedido);
 
-            Assert.AreEqual("Total: " + (totalPedido - valorDesconto), pedido);
+            Assert.AreEqual("TOTAL: " + (totalPedido - valorDesconto), pedido);
         }
 
         [Test]

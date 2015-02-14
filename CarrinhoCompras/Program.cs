@@ -22,7 +22,7 @@ namespace CarrinhoCompras
         static void Main(string[] args)
         {
             var input = new Input();
-            Console.WriteLine("-- Bem-vindo ao Carrinho de Compras!");
+            Console.WriteLine("-- Bem-vindo ao Carrinho de Compras!" + Environment.NewLine);
 
             while (add.ToUpper() == "S")
             {
@@ -63,7 +63,7 @@ namespace CarrinhoCompras
                     Console.WriteLine(loja.retornaPedido(0, totalPedido));
             }
 
-            Console.WriteLine("Pressione qualquer tecla para sair.");
+            Console.WriteLine(Environment.NewLine + "Pressione qualquer tecla para sair.");
             Console.ReadLine();
         }
 

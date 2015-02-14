@@ -48,7 +48,7 @@ namespace CarrinhoCompras
             if (produto != null)
             {
                 ProdutosCarrinho.Add(produto);
-                Console.WriteLine("O produto " + produto.name + " foi adicionado!");
+                Console.WriteLine(Environment.NewLine + "O produto " + produto.name + " foi adicionado!" + Environment.NewLine);
                 return "-> Deseja adicionar outro produto [s/n]?";
             }
             Console.WriteLine("Produto não encontrado!");
@@ -72,7 +72,7 @@ namespace CarrinhoCompras
                 valorDesconto = desconto.amount*0.01*totalPedido;
             else if (desconto.type == "fixed")
                 valorDesconto = desconto.amount;
-            Console.WriteLine("O desconto foi aplicado!");
+            Console.WriteLine(Environment.NewLine + "O desconto foi aplicado!");
             //retornaPedido(valorDesconto,totalPedido);
             return valorDesconto;
         }
@@ -84,10 +84,10 @@ namespace CarrinhoCompras
 
             foreach (var produto in ProdutosCarrinho)
             {
-                Console.WriteLine(produto.id + " " + produto.name + " " + produto.price);
+                Console.WriteLine(Environment.NewLine + "{0,-10}{1,-10}{2,20}", produto.id, produto.name, produto.price);
             }
-            Console.WriteLine("Descontos: " + valorDesconto);
-            return "Total: " + (totalPedido - valorDesconto);
+            Console.WriteLine(Environment.NewLine + "Descontos: " + valorDesconto);
+            return "TOTAL: " + (totalPedido - valorDesconto);
         }
     }
 }
